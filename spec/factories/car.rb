@@ -2,8 +2,9 @@ FactoryGirl.define do
   factory :car do
     year '1976'
     mileage '3000'
-    manufacturer
     color 'red'
-    text 'Cherry-red Mustang convertible'
+    description 'Cherry-red Mustang convertible'
+
+    manufacturer
   end
 end

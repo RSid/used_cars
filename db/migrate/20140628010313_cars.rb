@@ -3,9 +3,9 @@ class Cars < ActiveRecord::Migration
     create_table :cars do |t|
       t.integer :year, null: false
       t.integer :mileage, null: false
-      t.integer :manufactuerer_id, null: false
+      t.integer :manufacturer_id, null: false
       t.string :color, null: false
-      t.text :description, null: false
+      t.text :description
 
       t.timestamps
     end

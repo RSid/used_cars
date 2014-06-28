@@ -1,0 +1,29 @@
+<h1>Make New Car</h1>
+
+<%= form_for [@manufacturers, @car] do |f| %>
+  <% if @car.errors.any? %>
+    <ul>
+    <% @car.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+
+  <%= f.label :mileage %>
+  <%= f.text_field :mileage %>
+
+  <%= f.label :manufacturer %>
+  <%= f.collection_select(:manufacturer_id, Manufacturer.all,:id,:name) %>
+
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit 'Submit' %>
+
+<% end %>

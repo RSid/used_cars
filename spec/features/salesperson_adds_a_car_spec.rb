@@ -8,7 +8,7 @@ So that I can list it in my lot
 
   scenario 'salesperson adds a car' do
     manufacturer = FactoryGirl.build(:manufacturer)
-    car = FactoryGirl.build(:car)
+    car = FactoryGirl.build(:car, manufacturer: manufacturer)
 
     visit new_car_path
 
