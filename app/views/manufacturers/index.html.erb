@@ -1,0 +1,7 @@
+<h1>Manufacturers List</h1>
+
+<% @manufacturers.each do |manufacturer| %>
+  <ul>
+    <li><%= "#{manufacturer.name}, from #{manufacturer.country}" %></li>
+  </ul>
+<% end %>
