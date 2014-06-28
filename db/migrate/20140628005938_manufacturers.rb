@@ -1,6 +1,6 @@
 class Manufacturers < ActiveRecord::Migration
   def change
-    create_table :manufactuerers do |t|
+    create_table :manufacturers do |t|
       t.string :name, null: false
       t.string :country, null: false
     end
