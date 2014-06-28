@@ -8,7 +8,6 @@ class CarsController < ApplicationController
   end
 
   def create
-    binding.pry
     @manufacturers = Manufacturer.all
     @car = Car.create(car_params)
 
