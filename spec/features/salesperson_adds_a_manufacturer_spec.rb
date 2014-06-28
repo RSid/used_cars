@@ -6,7 +6,7 @@ feature 'salesperson adds a manufacturer', %Q(
   So that I can keep track of the types of cars found in the lot
 ) do
 
-  scenario 'salesperson can add a manufacturer' do
+  scenario 'salesperson adds a manufacturer' do
 
     manufacturer = FactoryGirl.build(:manufacturer)
 
@@ -20,4 +20,27 @@ feature 'salesperson adds a manufacturer', %Q(
     expect(page).to have_content manufacturer.country
   end
 
+  scenario 'salesperson cannot add a manufacturer without a name' do
+
+    manufacturer = FactoryGirl.build(:manufacturer)
+
+    visit new_manufacturer_path
+
+    fill_in 'Country', with: manufacturer.country
+    click_on 'Submit'
+
+    expect(page).to have_content 'Name can\'t be blank'
+  end
+
+  scenario 'salesperson cannot add a manufacturer without a country' do
+
+    manufacturer = FactoryGirl.build(:manufacturer)
+
+    visit new_manufacturer_path
+
+    fill_in 'Name', with: manufacturer.name
+    click_on 'Submit'
+
+    expect(page).to have_content 'Country can\'t be blank'
+  end
 end
