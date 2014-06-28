@@ -17,7 +17,6 @@ class CarsController < ApplicationController
       flash[:notice] = 'Car could not be saved'
       render new_car_path
     end
-
   end
 
   private
