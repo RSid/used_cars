@@ -1,0 +1,13 @@
+<h1>Cars List</h1>
+
+<% @cars.each do |car| %>
+  <ul>
+    <li><%= "Year: #{car.year}" %></li>
+    <li><%= "Mileage: #{car.mileage}" %></li>
+    <li><%= "Manufacturer: #{car.manufacturer.name}" %></li>
+    <li><%= "Color: #{car.color}" %></li>
+    <% if car.description %>
+      <li> <%= "Description: #{car.description}" %></li>
+    <% end %>
+  </ul>
+<% end %>
