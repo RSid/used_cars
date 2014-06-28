@@ -8,7 +8,6 @@ class CarsController < ApplicationController
   end
 
   def create
-    @manufacturers = Manufacturer.all
     @car = Car.create(car_params)
 
     if @car.save
@@ -16,7 +15,7 @@ class CarsController < ApplicationController
       redirect_to cars_path
     else
       flash[:notice] = 'Car could not be saved'
-      render 'cars/new'
+      render new_car_path
     end
 
   end
