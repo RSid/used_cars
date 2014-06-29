@@ -31,6 +31,7 @@ So that I can list it in my lot
     expect(page).to have_content car.manufacturer.name
     expect(page).to have_content car.color
     expect(page).to have_content car.description
+    expect(page).to have_content 'Car saved!'
   end
 
   scenario 'salesperson adds a car without description' do

@@ -18,6 +18,7 @@ feature 'salesperson adds a manufacturer', %Q(
 
     expect(page).to have_content manufacturer.name
     expect(page).to have_content manufacturer.country
+    expect(page).to have_content 'Manufacturer saved!'
   end
 
   scenario 'salesperson cannot add a manufacturer without a name' do
