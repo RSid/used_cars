@@ -1,0 +1,59 @@
+body {
+  margin: 0px;
+  font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+#header {
+  background: #C3C7AD;
+  margin: 0px;
+  padding: 10px;
+  color: #222700;
+}
+
+#nav-bar {
+  list-style: none;
+  text-align: center;
+}
+
+#nav-bar li {
+  display: inline-block;
+  padding: 15px;
+  background-color: #9DAE97;
+  border: 1px solid #66825B;
+  border-radius: 10px;
+}
+
+#nav-bar li a {
+  text-decoration: none;
+  color: #222700;
+}
+
+#content {
+  padding: 10px;
+}
+
+.list {
+  margin-left: auto;
+  margin-right: 0;
+  width: 55%;
+  list-style: none;
+}
+
+h2 {
+  text-align: center;
+}
+
+pre {
+  display: inline-block;
+  padding-left: 60px;
+}
+
+#art {
+  text-align: center;
+}
