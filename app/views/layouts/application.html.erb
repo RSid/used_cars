@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <h1>CAR LOTS IN SPACE</h1>
+  <ul id=nav-bar>
+    <li> <%= link_to 'List of Manufacturers', manufacturers_path %> </li>
+    <li> <%= link_to 'New Manufacturer', new_manufacturer_path %> </li>
+    <li> <%= link_to 'List of Cars', cars_path %> </li>
+    <li> <%= link_to 'New Car', new_car_path %> </li>
+  </ul>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
