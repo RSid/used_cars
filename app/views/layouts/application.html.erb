@@ -3,12 +3,27 @@
 <head>
   <title>UsedCars</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "style.css" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id=header>
+    <h1>CAR LOTS IN SPACE</h1>
+    <ul id=nav-bar>
+      <li> <%= link_to 'List of Manufacturers', manufacturers_path %> </li>
+      <li> <%= link_to 'New Manufacturer', new_manufacturer_path %> </li>
+      <li> <%= link_to 'List of Cars', cars_path %> </li>
+      <li> <%= link_to 'New Car', new_car_path %> </li>
+    </ul>
+  </div>
 
-<%= yield %>
+  <div id=content>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    
+    <%= yield %>
+  </div
 
 </body>
 </html>
